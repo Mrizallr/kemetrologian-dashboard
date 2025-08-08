@@ -21,6 +21,7 @@ import SingleArticlePage from "./pages/SingleArticlePage";
 import DaftarAlat from "./pages/DaftarAlat";
 import DataPermohonan from "./pages/DataPermohonan";
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "./components/theme-provider";
 
 // Auth context (tanpa username/password manual)
 const AuthContext = React.createContext<{
@@ -69,9 +70,15 @@ function App() {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, logout }}>
-      <Router>
-        <div className="min-h-screen bg-background">
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <AuthContext.Provider value={{ isAuthenticated, logout }}>
+        <Router>
+        <div className="min-h-screen bg-background text-foreground">
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
@@ -177,8 +184,9 @@ function App() {
           </Routes>
           <Toaster />
         </div>
-      </Router>
-    </AuthContext.Provider>
+        </Router>
+      </AuthContext.Provider>
+    </ThemeProvider>
   );
 }
 

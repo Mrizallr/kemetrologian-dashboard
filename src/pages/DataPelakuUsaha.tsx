@@ -139,8 +139,8 @@ const DataPelakuUsaha: React.FC = () => {
       <div className="space-y-6">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold">Data Pelaku Usaha</h1>
-            <p className="text-gray-600">
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Data Pelaku Usaha</h1>
+            <p className="text-gray-600 dark:text-gray-400">
               Kelola data pelaku usaha dan UTTP mereka
             </p>
           </div>
@@ -169,7 +169,7 @@ const DataPelakuUsaha: React.FC = () => {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                <Search className="absolute left-3 top-3 w-4 h-4 text-gray-400 dark:text-gray-500" />
                 <Input
                   placeholder="Cari nama atau lokasi..."
                   value={searchQuery}
@@ -270,13 +270,19 @@ const DataPelakuUsaha: React.FC = () => {
                         <Button
                           variant="ghost"
                           size="sm"
+                          className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-950/50"
                           onClick={() =>
                             navigate(`/admin/view-data/${item.id}`)
                           }
                         >
                           <Eye className="w-4 h-4" />
                         </Button>
-                        <Button variant="ghost" size="sm" asChild>
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 hover:bg-green-50 dark:hover:bg-green-950/50"
+                          asChild
+                        >
                           <Link to={`/admin/edit-data/${item.id}`}>
                             <Edit className="w-4 h-4" />
                           </Link>
@@ -284,7 +290,7 @@ const DataPelakuUsaha: React.FC = () => {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="text-red-600 hover:text-red-700"
+                          className="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 hover:bg-red-50 dark:hover:bg-red-950/50"
                           onClick={() => handleDelete(item.id)}
                         >
                           <Trash2 className="w-4 h-4" />
@@ -296,7 +302,7 @@ const DataPelakuUsaha: React.FC = () => {
               </TableBody>
             </Table>
             {filteredData.length === 0 && (
-              <p className="text-center text-gray-500 py-4">
+              <p className="text-center text-gray-500 dark:text-gray-400 py-4">
                 Tidak ada data ditemukan
               </p>
             )}

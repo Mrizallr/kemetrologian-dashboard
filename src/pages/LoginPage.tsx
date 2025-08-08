@@ -67,7 +67,7 @@ const LoginPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen bg-gradient-to-br from-blue-100 via-white to-green-100 flex items-center justify-center p-4">
+    <div className="w-screen h-screen bg-gradient-to-br from-blue-100 via-white to-green-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-6">
           <Button
@@ -80,7 +80,7 @@ const LoginPage: React.FC = () => {
           </Button>
         </div>
 
-        <Card className="border-0 shadow-2xl bg-white/80 backdrop-blur-md">
+        <Card className="border-0 shadow-2xl bg-white/80 dark:bg-slate-800/90 backdrop-blur-md">
           <CardHeader className="text-center pt-4">
             <div className="w-48 h-auto mx-auto mb-3">
               <img
@@ -90,10 +90,10 @@ const LoginPage: React.FC = () => {
               />
             </div>
 
-            <CardTitle className="text-2xl font-semibold">
+            <CardTitle className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
               Masuk Admin
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="text-gray-600 dark:text-gray-400">
               Silakan masuk untuk mengakses dashboard
             </CardDescription>
           </CardHeader>

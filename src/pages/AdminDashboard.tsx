@@ -155,10 +155,10 @@ const AdminDashboard: React.FC = () => {
         {/* Page Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">
+            <h1 className="text-3xl font-bold text-foreground">
               Dashboard Admin
             </h1>
-            <p className="text-gray-600 mt-1">
+            <p className="text-muted-foreground mt-1">
               Selamat datang di sistem pengelolaan data kemetrologian
             </p>
           </div>
@@ -180,73 +180,73 @@ const AdminDashboard: React.FC = () => {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="border-0 shadow-md bg-gradient-to-br from-blue-50 to-blue-100">
+          <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 via-blue-50 to-blue-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 dark:border dark:border-slate-600/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-gray-700">
+              <CardTitle className="text-sm font-medium text-slate-600 dark:text-slate-300">
                 Total Pelaku Usaha
               </CardTitle>
-              <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                <Users className="w-4 h-4 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                <Users className="w-5 h-5 text-white" />
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-gray-900">
+              <div className="text-3xl font-bold text-slate-900 dark:text-slate-100">
                 {mockStats.totalPelakuUsaha}
               </div>
-              <p className="text-xs text-gray-600 mt-1">
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                 +{mockStats.pelakuUsahaBaru} bulan ini
               </p>
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-md bg-gradient-to-br from-green-50 to-green-100">
+          <Card className="border-0 shadow-lg bg-gradient-to-br from-emerald-50 via-emerald-50 to-emerald-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 dark:border dark:border-slate-600/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-gray-700">
+              <CardTitle className="text-sm font-medium text-slate-600 dark:text-slate-300">
                 UTTP Terdaftar
               </CardTitle>
-              <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-                <Scale className="w-4 h-4 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 dark:from-emerald-400 dark:to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+                <Scale className="w-5 h-5 text-white" />
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-gray-900">
+              <div className="text-3xl font-bold text-slate-900 dark:text-slate-100">
                 {mockStats.uttpTerdaftar}
               </div>
-              <p className="text-xs text-gray-600 mt-1">
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                 Alat ukur, takar, timbang
               </p>
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-md bg-gradient-to-br from-orange-50 to-orange-100">
+          <Card className="border-0 shadow-lg bg-gradient-to-br from-amber-50 via-amber-50 to-amber-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 dark:border dark:border-slate-600/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-gray-700">
+              <CardTitle className="text-sm font-medium text-slate-600 dark:text-slate-300">
                 Tera Ulang
               </CardTitle>
-              <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-                <Calendar className="w-4 h-4 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-600 dark:from-amber-400 dark:to-amber-500 rounded-xl flex items-center justify-center shadow-lg">
+                <Calendar className="w-5 h-5 text-white" />
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-gray-900">
+              <div className="text-3xl font-bold text-slate-900 dark:text-slate-100">
                 {mockStats.teraUlangBulanIni}
               </div>
-              <p className="text-xs text-gray-600 mt-1">Bulan ini</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Bulan ini</p>
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-md bg-gradient-to-br from-purple-50 to-purple-100">
+          <Card className="border-0 shadow-lg bg-gradient-to-br from-violet-50 via-violet-50 to-violet-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 dark:border dark:border-slate-600/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-gray-700">
+              <CardTitle className="text-sm font-medium text-slate-600 dark:text-slate-300">
                 Status Aktif
               </CardTitle>
-              <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
-                <Activity className="w-4 h-4 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-violet-600 dark:from-violet-400 dark:to-violet-500 rounded-xl flex items-center justify-center shadow-lg">
+                <Activity className="w-5 h-5 text-white" />
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-gray-900">89%</div>
-              <p className="text-xs text-gray-600 mt-1">Tingkat kepatuhan</p>
+              <div className="text-3xl font-bold text-slate-900 dark:text-slate-100">89%</div>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Tingkat kepatuhan</p>
             </CardContent>
           </Card>
         </div>
@@ -254,13 +254,15 @@ const AdminDashboard: React.FC = () => {
         {/* Charts Section */}
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Status Tera Chart */}
-          <Card className="border-0 shadow-md">
+          <Card className="border-0 shadow-lg bg-white dark:bg-slate-800 dark:border dark:border-slate-700/50">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <Activity className="w-5 h-5 text-purple-600" />
+              <CardTitle className="flex items-center gap-3 text-slate-900 dark:text-slate-100">
+                <div className="w-8 h-8 bg-gradient-to-br from-violet-500 to-violet-600 rounded-lg flex items-center justify-center">
+                  <Activity className="w-4 h-4 text-white" />
+                </div>
                 Status Tera
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-slate-600 dark:text-slate-400">
                 Distribusi status tera pelaku usaha
               </CardDescription>
             </CardHeader>
@@ -292,13 +294,15 @@ const AdminDashboard: React.FC = () => {
           </Card>
 
           {/* Jenis Lapak Chart */}
-          <Card className="border-0 shadow-md">
+          <Card className="border-0 shadow-lg bg-white dark:bg-slate-800 dark:border dark:border-slate-700/50">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <BarChart3 className="w-5 h-5 text-blue-600" />
+              <CardTitle className="flex items-center gap-3 text-slate-900 dark:text-slate-100">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <BarChart3 className="w-4 h-4 text-white" />
+                </div>
                 Jenis Lapak
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-slate-600 dark:text-slate-400">
                 Distribusi pelaku usaha berdasarkan jenis lapak
               </CardDescription>
             </CardHeader>
@@ -324,13 +328,15 @@ const AdminDashboard: React.FC = () => {
 
         {/* Recent Data */}
         <div className="grid lg:grid-cols-2 gap-8">
-          <Card className="border-0 shadow-md">
+          <Card className="border-0 shadow-lg bg-white dark:bg-slate-800 dark:border dark:border-slate-700/50">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <FileText className="w-5 h-5 text-blue-600" />
+              <CardTitle className="flex items-center gap-3 text-slate-900 dark:text-slate-100">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <FileText className="w-4 h-4 text-white" />
+                </div>
                 Data Terbaru
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-slate-600 dark:text-slate-400">
                 Pelaku usaha yang baru didaftarkan
               </CardDescription>
             </CardHeader>
@@ -342,16 +348,16 @@ const AdminDashboard: React.FC = () => {
                   recentData.slice(0, 3).map((item) => (
                     <div
                       key={item.id}
-                      className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                      className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-700/50 rounded-xl border border-slate-200 dark:border-slate-600/50 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-colors"
                     >
                       <div className="flex-1">
-                        <h4 className="font-medium text-gray-900">
+                        <h4 className="font-semibold text-slate-900 dark:text-slate-100">
                           {item.nama}
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-slate-600 dark:text-slate-300">
                           {item.jenis} - {item.lokasi}
                         </p>
-                        <p className="text-xs text-gray-500 mt-1">
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                           {item.uttpCount} UTTP terdaftar
                         </p>
                       </div>
@@ -374,28 +380,30 @@ const AdminDashboard: React.FC = () => {
           </Card>
 
           {/* Statistik Bulanan */}
-          <Card className="border-0 shadow-md">
+          <Card className="border-0 shadow-lg bg-white dark:bg-slate-800 dark:border dark:border-slate-700/50">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <TrendingUp className="w-5 h-5 text-green-600" />
+              <CardTitle className="flex items-center gap-3 text-slate-900 dark:text-slate-100">
+                <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4 text-white" />
+                </div>
                 Statistik Bulanan
               </CardTitle>
-              <CardDescription>Ringkasan aktivitas bulan ini</CardDescription>
+              <CardDescription className="text-slate-600 dark:text-slate-400">Ringkasan aktivitas bulan ini</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-6">
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                       Pendaftaran Baru
                     </span>
-                    <span className="text-sm font-bold text-blue-600">
+                    <span className="text-sm font-bold text-blue-600 dark:text-blue-400">
                       +{mockStats.pelakuUsahaBaru}
                     </span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
                     <div
-                      className="bg-blue-500 h-2 rounded-full"
+                      className="bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 h-3 rounded-full shadow-sm"
                       style={{ width: "75%" }}
                     ></div>
                   </div>
@@ -403,16 +411,16 @@ const AdminDashboard: React.FC = () => {
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                       Tera Ulang
                     </span>
-                    <span className="text-sm font-bold text-green-600">
+                    <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">
                       {mockStats.teraUlangBulanIni}
                     </span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
                     <div
-                      className="bg-green-500 h-2 rounded-full"
+                      className="bg-gradient-to-r from-emerald-500 to-emerald-600 dark:from-emerald-400 dark:to-emerald-500 h-3 rounded-full shadow-sm"
                       style={{ width: "60%" }}
                     ></div>
                   </div>
@@ -420,16 +428,16 @@ const AdminDashboard: React.FC = () => {
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                       Kepatuhan UTTP
                     </span>
-                    <span className="text-sm font-bold text-purple-600">
+                    <span className="text-sm font-bold text-violet-600 dark:text-violet-400">
                       89%
                     </span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
                     <div
-                      className="bg-purple-500 h-2 rounded-full"
+                      className="bg-gradient-to-r from-violet-500 to-violet-600 dark:from-violet-400 dark:to-violet-500 h-3 rounded-full shadow-sm"
                       style={{ width: "89%" }}
                     ></div>
                   </div>
@@ -440,10 +448,10 @@ const AdminDashboard: React.FC = () => {
         </div>
 
         {/* Quick Actions */}
-        <Card className="border-0 shadow-md">
+        <Card className="border-0 shadow-lg bg-white dark:bg-slate-800 dark:border dark:border-slate-700/50">
           <CardHeader>
-            <CardTitle>Aksi Cepat</CardTitle>
-            <CardDescription>
+            <CardTitle className="text-slate-900 dark:text-slate-100">Aksi Cepat</CardTitle>
+            <CardDescription className="text-slate-600 dark:text-slate-400">
               Shortcut untuk tugas yang sering dilakukan
             </CardDescription>
           </CardHeader>

@@ -15,6 +15,7 @@ import {
   Repeat,
   Scale3DIcon,
 } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
 import { toast } from "sonner";
 
 interface AdminLayoutProps {
@@ -58,7 +59,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
       {/* Sidebar */}
       <aside
         className={`
-            fixed lg:static z-40 top-0 left-0 h-screen w-64 bg-white border-r border-gray-200 shadow-lg
+            fixed lg:static z-40 top-0 left-0 h-screen w-64 bg-background border-r border-border shadow-lg
             transform transition-transform duration-300 ease-in-out
             ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
             lg:translate-x-0
@@ -66,8 +67,8 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center gap-3 p-6 border-b border-gray-200">
-            <div className="w-12 h-12 rounded-lg overflow-hidden bg-white">
+          <div className="flex items-center gap-3 p-6 border-b border-border">
+            <div className="w-12 h-12 rounded-lg overflow-hidden bg-background">
               <img
                 src="/logo-disperindag.png"
                 alt="Logo Disperindag"
@@ -75,8 +76,8 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
               />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-gray-900">Admin Portal</h1>
-              <p className="text-xs text-gray-600">Kemetrologian</p>
+              <h1 className="text-lg font-bold text-foreground">Admin Portal</h1>
+              <p className="text-xs text-muted-foreground">Kemetrologian</p>
             </div>
           </div>
 
@@ -92,8 +93,8 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
                     onClick={() => setSidebarOpen(false)}
                     className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive(item.path)
-                        ? "bg-blue-50 text-blue-700 border border-blue-200"
-                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                        ? "bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20"
+                        : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
                     }`}
                   >
                     <Icon className="w-5 h-5" />
@@ -105,11 +106,15 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
           </nav>
 
           {/* Footer */}
-          <div className="p-4 border-t border-gray-200">
+          <div className="p-4 border-t border-border space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground">Theme</span>
+              <ThemeToggle />
+            </div>
             <Button
               variant="outline"
               onClick={handleLogout}
-              className="w-full justify-start gap-3 text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200"
+              className="w-full justify-start gap-3 text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 hover:bg-red-50 dark:hover:bg-red-950/50 border-red-200 dark:border-red-800"
             >
               <LogOut className="w-4 h-4" />
               Logout
@@ -143,7 +148,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
       </div>
 
       {/* Main Content */}
-      <main className="flex-1 h-screen overflow-auto bg-gray-50 p-4 pt-16 lg:pt-8">
+      <main className="flex-1 h-screen overflow-auto bg-slate-50 dark:bg-slate-900 p-4 pt-16 lg:pt-8">
         {children}
       </main>
     </div>
