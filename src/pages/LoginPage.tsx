@@ -84,7 +84,7 @@ const LoginPage: React.FC = () => {
           <CardHeader className="text-center pt-4">
             <div className="w-48 h-auto mx-auto mb-3">
               <img
-                src="/src/assets/Logo Disperindag.png"
+                src="/logo-disperindag.png"
                 alt="Logo Disperindag"
                 className="object-contain w-full h-full"
               />

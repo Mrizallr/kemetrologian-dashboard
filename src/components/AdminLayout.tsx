@@ -69,7 +69,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
           <div className="flex items-center gap-3 p-6 border-b border-gray-200">
             <div className="w-12 h-12 rounded-lg overflow-hidden bg-white">
               <img
-                src="/src/assets/Logo Disperindag.png"
+                src="/logo-disperindag.png"
                 alt="Logo Disperindag"
                 className="object-contain w-full h-full"
               />
