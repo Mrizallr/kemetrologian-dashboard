@@ -67,6 +67,9 @@ function App() {
   const logout = async () => {
     await supabase.auth.signOut();
     setIsAuthenticated(false);
+    // Clear localStorage
+    localStorage.clear();
+    sessionStorage.clear();
   };
 
   return (

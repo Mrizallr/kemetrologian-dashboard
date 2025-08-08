@@ -28,10 +28,15 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout();
-    toast.success("Logout berhasil");
-    navigate("/");
+  const handleLogout = async () => {
+    try {
+      await logout();
+      toast.success("Logout berhasil");
+      // Force redirect to landing page
+      window.location.href = '/';
+    } catch (error) {
+      toast.error("Gagal logout");
+    }
   };
 
   const isActive = (path: string) => location.pathname === path;
